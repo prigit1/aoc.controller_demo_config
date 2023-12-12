@@ -1,30 +1,32 @@
 ---
-- name: Include Demo Project Job Templates
-  ansible.builtin.include_tasks: job_templates/demo.yml
-  when:
-    - (seed_lab_content | bool)
-  tags:
-    - templates
+- name: Content Lab - Azure - Create Resource Group
+  ansible.controller.job_template:
+    name: Content Lab - Azure - Create Resource Group
+    inventory: Azure
+    playbook: playbooks/create_resource_group.yml
+    project: Ansible Cloud Content Lab - Azure Roles
+    extra_vars:
+      resource_group: priya_rg
+      region: eastus
 
-- name: Include Validated Content Job Templates
-  ansible.builtin.include_tasks: job_templates/validated_content.yml
-  when:
-    - (seed_validated_content | bool)
-  tags:
-    - templates
-
-- name: Include Content Lab Azure Job Templates
-  ansible.builtin.include_tasks: job_templates/content_lab_azure.yml
-  when:
-    - (seed_lab_content | bool)
-  tags:
-    - templates
-    - azure
-
-- name: Include Content Lab AWS Job Templates
-  ansible.builtin.include_tasks: job_templates/content_lab_aws.yml
-  when:
-    - (seed_lab_content | bool)
-  tags:
-    - templates
-    - aws
+- name: Content Lab - Azure - Create RHEL VM
+  ansible.controller.job_template:
+    name: Create RHEL VM
+    inventory: Azure
+    playbook: playbooks/create_vm.yml
+    project: Ansible Cloud Content Lab - Azure Roles
+    extra_vars:
+      resource_group: priya_rg
+      region: eastus
+      os_type: Linux
+      vm_name: test_vm1
+      vm_blueprint: rhel9
+      nic_name: create-rhel-test-nic
+      network_sec_group_name: create-rhel-test-sg
+      public_ip_name: create-rhel-test-public-ip
+      vnet_name: vnet_test
+      subnet_name: subnet_test
+      create_public_ip: true
+      admin_user: azureuser
+      admin_password: ansible12345!
+    ask_variables_on_launch: true
