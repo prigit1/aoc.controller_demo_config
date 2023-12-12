@@ -1,13 +1,10 @@
 ---
-- name: Add Ansible Cloud Content Lab Azure Demo Project
-  ansible.controller.project:
-    name: Ansible Cloud Content Lab - Azure Roles
+controller_projects:
+  - name: Ansible Cloud Content Lab - Azure Roles
     description: Azure Demo
     default_environment: quay.io/scottharwell/cloud-ee:latest
     organization: Default  # Organization is required in projects
     scm_type: git
     scm_url: https://github.com/ansible-content-lab/azure.infrastructure_config_demos.git
     state: present
-    update_project: true
-    wait: true
- 
+...

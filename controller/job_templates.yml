@@ -1,7 +1,6 @@
 ---
-- name: Content Lab - Azure - Create Resource Group
-  ansible.controller.job_template:
-    name: Content Lab - Azure - Create Resource Group
+controller_templates:
+  - name: Content Lab - Azure - Create Resource Group
     inventory: Azure
     playbook: playbooks/create_resource_group.yml
     project: Ansible Cloud Content Lab - Azure Roles
@@ -9,9 +8,7 @@
       resource_group: priya_rg
       region: eastus
 
-- name: Content Lab - Azure - Create RHEL VM
-  ansible.controller.job_template:
-    name: Create RHEL VM
+  - name: Create RHEL VM
     inventory: Azure
     playbook: playbooks/create_vm.yml
     project: Ansible Cloud Content Lab - Azure Roles
@@ -29,4 +26,4 @@
       create_public_ip: true
       admin_user: azureuser
       admin_password: ansible12345!
-    ask_variables_on_launch: true
+...
