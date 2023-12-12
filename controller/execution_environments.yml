@@ -1,0 +1,4 @@
+---
+controller_execution_environments:
+  - name: "Cloud EE"
+    image: quay.io/scottharwell/cloud-ee:latest
