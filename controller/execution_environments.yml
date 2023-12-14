@@ -1,4 +1,8 @@
 ---
 controller_execution_environments:
   - name: "Cloud EE"
-    image: quay.io/scottharwell/cloud-ee:latest
+    description: ""
+    image: "quay.io/scottharwell/cloud-ee:latest"
+    pull: "missing"
+    credential: "Demo Credential"
+...
