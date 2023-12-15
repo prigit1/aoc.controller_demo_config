@@ -22,7 +22,7 @@ controller_templates:
    instance_groups:
      - controlplane
    inventory: Demo Azure Inventory
-...
+   
 #   - name: Create RHEL VM
 #     inventory: Azure
 #     playbook: playbooks/create_vm.yml

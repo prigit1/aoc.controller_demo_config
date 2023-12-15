@@ -7,7 +7,7 @@ controller_projects:
     scm_type: git
     #scm_url: https://github.com/prigit1/aoc.controller_demo_config.git
     scm_url: https://github.com/ansible-content-lab/azure.infrastructure_config_demos.git
-...
+    
 
 # ---
 # controller_projects:

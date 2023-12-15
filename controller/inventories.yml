@@ -3,4 +3,4 @@ controller_inventories:
  - name: Demo Azure Inventory
    organization: Default
    description: clone of Demo Inventory for Azure example
-...
+   

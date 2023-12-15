@@ -4,5 +4,4 @@ controller_execution_environments:
     description: ""
     image: "quay.io/scottharwell/cloud-ee:latest"
     pull: "missing"
-    credential: "Demo Credential"
-...
+    
