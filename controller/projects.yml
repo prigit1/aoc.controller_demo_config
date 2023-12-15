@@ -2,11 +2,11 @@
 controller_projects:
   - name: Ansible Cloud Content Lab - Azure Roles
     description: Azure Demo
-    #default_environment: "quay.io/scottharwell/cloud-ee:latest"
+    default_environment: Cloud EE
     organization: Default
     scm_type: git
-    scm_url: https://github.com/prigit1/aoc.controller_demo_config.git
-    #scm_url: https://github.com/ansible-content-lab/azure.infrastructure_config_demos.git
+    #scm_url: https://github.com/prigit1/aoc.controller_demo_config.git
+    scm_url: https://github.com/ansible-content-lab/azure.infrastructure_config_demos.git
 ...
 
 # ---
