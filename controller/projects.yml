@@ -5,18 +5,5 @@ controller_projects:
     default_environment: Cloud EE
     organization: Default
     scm_type: git
-    #scm_url: https://github.com/prigit1/aoc.controller_demo_config.git
     scm_url: https://github.com/ansible-content-lab/azure.infrastructure_config_demos.git
     
-
-# ---
-# controller_projects:
-#  - name: AAP Config-As-Code Examples
-#    organization: Default
-#    scm_branch: main
-#    scm_clean: 'no'
-#    scm_delete_on_update: 'no'
-#    scm_type: git
-#    scm_update_on_launch: 'no'
-#    scm_url: https://github.com/ffirg/aap-cac.git
-# ...

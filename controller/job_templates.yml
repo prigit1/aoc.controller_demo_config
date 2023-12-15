@@ -1,12 +1,3 @@
-# ---
-# controller_templates:
-#   - name: Content Lab - Azure - Create Resource Group
-#     inventory: Azure
-#     playbook: playbooks/create_resource_group.yml
-#     project: Ansible Cloud Content Lab - Azure Roles
-#     extra_vars:
-#       resource_group: priya_rg
-#       region: eastus
 ---
 controller_templates:
  - name: Content Lab - Azure - Create Resource Group
@@ -16,47 +7,34 @@ controller_templates:
    instance_groups:
      - default
    inventory: Demo Azure Inventory
+   extra_vars:
+       resource_group: priya_rg
+       region: eastus
  - name: Demo Job Priya
    project: Ansible Cloud Content Lab - Azure Roles
-   #playbook: hello_world.yml
    playbook: playbooks/create_resource_group.yml
    execution_environment: Minimal execution environment
    instance_groups:
      - controlplane
    inventory: Demo Azure Inventory
-
-#   - name: Create RHEL VM
-#     inventory: Azure
-#     playbook: playbooks/create_vm.yml
-#     project: Ansible Cloud Content Lab - Azure Roles
-#     extra_vars:
-#       resource_group: priya_rg
-#       region: eastus
-#       os_type: Linux
-#       vm_name: test_vm1
-#       vm_blueprint: rhel9
-#       nic_name: create-rhel-test-nic
-#       network_sec_group_name: create-rhel-test-sg
-#       public_ip_name: create-rhel-test-public-ip
-#       vnet_name: vnet_test
-#       subnet_name: subnet_test
-#       create_public_ip: true
-#       admin_user: azureuser
-#       admin_password: ansible12345!
-# ...
-
-# ---
-# controller_templates:
-#  - name: Demo Job Template
-#    execution_environment: Default execution environment
-#    instance_groups:
-#      - default
-#    inventory: Demo Inventory
-#  - name: Demo Job Template2
-#    project: Demo Project
-#    playbook: hello_world.yml
-#    execution_environment: Minimal execution environment
-#    instance_groups:
-#      - controlplane
-#    inventory: Demo Inventory2
-# ...
+   extra_vars:
+       resource_group: priya_rg
+       region: eastus
+ - name: Create RHEL VM
+    inventory: Demo Azure Inventory
+    playbook: playbooks/create_vm.yml
+    project: Ansible Cloud Content Lab - Azure Roles
+    extra_vars:
+      resource_group: priya_rg
+      region: eastus
+      os_type: Linux
+      vm_name: test_vm1
+      vm_blueprint: rhel9
+      nic_name: create-rhel-test-nic
+      network_sec_group_name: create-rhel-test-sg
+      public_ip_name: create-rhel-test-public-ip
+      vnet_name: vnet_test
+      subnet_name: subnet_test
+      create_public_ip: true
+      admin_user: azureuser
+      admin_password: ansible12345!
