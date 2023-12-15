@@ -21,10 +21,10 @@ controller_templates:
        resource_group: priya_rg
        region: eastus
  - name: Create RHEL VM
-    inventory: Demo Azure Inventory
-    playbook: playbooks/create_vm.yml
-    project: Ansible Cloud Content Lab - Azure Roles
-    extra_vars:
+   inventory: Demo Azure Inventory
+   playbook: playbooks/create_vm.yml
+   project: Ansible Cloud Content Lab - Azure Roles
+   extra_vars:
       resource_group: priya_rg
       region: eastus
       os_type: Linux
