@@ -10,19 +10,20 @@
 ---
 controller_templates:
  - name: Content Lab - Azure - Create Resource Group
+   project: Ansible Cloud Content Lab - Azure Roles
    execution_environment: Default execution environment
    instance_groups:
      - default
    inventory: Demo Azure Inventory
  - name: Demo Job Priya
-   project: Demo Project
+   project: Ansible Cloud Content Lab - Azure Roles
    #playbook: hello_world.yml
    playbook: playbooks/create_resource_group.yml
    execution_environment: Minimal execution environment
    instance_groups:
      - controlplane
    inventory: Demo Azure Inventory
-   
+
 #   - name: Create RHEL VM
 #     inventory: Azure
 #     playbook: playbooks/create_vm.yml
