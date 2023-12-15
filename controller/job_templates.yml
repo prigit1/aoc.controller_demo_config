@@ -11,6 +11,7 @@
 controller_templates:
  - name: Content Lab - Azure - Create Resource Group
    project: Ansible Cloud Content Lab - Azure Roles
+   playbook: playbooks/create_resource_group.yml
    execution_environment: Default execution environment
    instance_groups:
      - default
